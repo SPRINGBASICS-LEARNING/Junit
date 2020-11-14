@@ -1,10 +1,32 @@
 package com.learning;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MyMathTest {
+
+    @BeforeEach
+    public void before() {
+        System.out.println("Before");
+    }
+
+    @AfterEach
+    public void after() {
+        System.out.println("After");
+    }
+
+    @BeforeAll
+    public static void beforeAll() {
+        System.out.println("Before-all");
+    }
+
+    @AfterAll
+    public static void afterAll() {
+        System.out.println("After-all");
+    }
+
 
     MyMath myMath = new MyMath();
     @Test
